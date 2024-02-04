@@ -9,6 +9,7 @@ import 'package:portfolio/globals/constants.dart';
 import 'package:portfolio/globals/text_styles.dart';
 import 'package:get/get.dart';
 import 'package:portfolio/widgets/about_content.dart';
+import 'package:portfolio/widgets/elevated_card_widget.dart';
 import 'package:portfolio/widgets/profile_photo.dart';
 import 'package:portfolio/widgets/socials_widget.dart';
 
@@ -64,92 +65,81 @@ class HomePage extends StatelessWidget {
               ],
             ),
             SocialsWidget(isPhone: isPhone, constants: constants, screenSize: screenSize),
-            // Container(height: 100,color: constants.bgColor2,),
-            // Container(
-            //   color: constants.bgColor2,
-            //   child: Center(
-            //     child: Text('Projects',style: MyTextStyles.appBarContents.copyWith(
-            //       fontSize: constants.titleSize1,
-            //       color: constants.superLightContentColor,
-            //     ),),
-            //   ),
-            // ),
-            // Container(height: 100,color: constants.bgColor2,),
-            // GetBuilder<ProjectsController>(
-            //   builder: (projectsController){
-            //     return Container(
-            //         height: 400,
-            //         color: constants.bgColor2,
-            //         child: Row(
-            //           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            //           children: [
-            //             IconButton(
-            //               onPressed: (){
-            //                 double currOffset= projectsController.scrollController.offset;
-            //                 projectsController.scrollController.animateTo(currOffset - 400, duration: Duration(seconds: 1), curve: Curves.easeIn);
-            //               },
-            //               icon: Icon(Icons.arrow_back_ios,color: constants.superLightContentColor,size: 50,),
-            //             ),
-            //             Container(
-            //               width: screenSize*0.8,
-            //               height: 500,
-            //               child: ListView.separated(
-            //                 scrollDirection: Axis.horizontal,
-            //                 itemCount: 5,
-            //                 controller: projectsController.scrollController,
-            //                 physics: AlwaysScrollableScrollPhysics(),
-            //                 itemBuilder: (context,index){
-            //                   return Container(
-            //                     width: 400,
-            //                     decoration: BoxDecoration(
-            //                       border: Border.all(color: constants.superLightContentColor),
-            //                       borderRadius: BorderRadius.circular(80),
-            //                       image: DecorationImage(
-            //                         image: AssetImage(projects[index].imagePath),
-            //                         fit: BoxFit.fill,
-            //                       ),
-            //                     ),
-            //                     child: Column(
-            //                       mainAxisAlignment: MainAxisAlignment.end,
-            //                       children: [
-            //                         Container(
-            //                           width : double.infinity,
-            //                           padding: EdgeInsets.all(10),
-            //                           color: constants.bgColor2.withOpacity(0.5),
-            //                           child: Center(
-            //                             child: Text(projects[index].title, style: MyTextStyles.appBarContents.copyWith(
-            //                               fontSize: constants.titleSize2,
-            //                               color: constants.superLightContentColor,
-            //                             ),),
-            //                           ),
-            //                         ),
-            //                         Expanded(child: SizedBox()),
-            //                         Container(
-            //                           height: 300,
-            //                           color: constants.bgColor2.withOpacity(0.5),
-            //                         )
-            //                       ],
-            //                     ),
-            //                   );
-            //                 },
-            //                 separatorBuilder: (context,index){
-            //                   return SizedBox(width: 100,);
-            //                 },
-            //               )
-            //             ),
-            //             IconButton(
-            //               onPressed: (){
-            //                 double currOffset= projectsController.scrollController.offset;
-            //                 projectsController.scrollController.animateTo(currOffset + 400, duration: Duration(seconds: 1), curve: Curves.easeIn);
-            //               },
-            //               icon: Icon(Icons.arrow_forward_ios,color: constants.superLightContentColor,size: 50,),
-            //             ),
-            //           ],
-            //         )
-            //     );
-            //   },
-            // ),
-            // Container(color: constants.bgColor2, height: 100,),
+            Container(height: isPhone? 30: 70,color: constants.bgColor2,),
+            Container(
+              color: constants.bgColor2,
+              child: Center(
+                child: Column(
+                  children: [
+                    Text('SERVICES',style: MyTextStyles.appBarContents.copyWith(
+                      fontSize: constants.titleSize2,
+                      color: constants.subheadingContentColor,
+                    ),),
+                    Text('WHAT I CAN DO',style: MyTextStyles.appBarContents.copyWith(
+                      fontSize: constants.titleSize1,
+                      color: constants.superLightContentColor,
+                    ),),
+                    Obx(() => Padding(
+                      padding:  EdgeInsets.symmetric(horizontal: isPhone ? 0 : screenSize*0.1),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Flexible(
+                            flex: 1,
+                            child: InkWell(
+                              onHover: (value){
+                                hoverController.isServicesUiCardHovered.value = value;
+                                print('hovered: ${hoverController.isServicesUiCardHovered.value}');
+                              },
+                              onTap: (){},
+                              child: ElevatedCardWidget(
+                                screenSize: screenSize,
+                                title: 'Ui/Ux Development',
+                                description: 'I can design and develop beautiful and responsive user interfaces using Figma and Flutter.',
+                                icon: FontAwesomeIcons.pen, isPhone: isPhone, constants: constants,
+                                isHovered: hoverController.isServicesUiCardHovered.value,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            flex: 1,
+                            child: InkWell(
+                              onHover: (value){
+                                hoverController.isServicesFlutterCardHovered.value = value;
+                              },
+                              onTap: (){},
+                              child: ElevatedCardWidget(
+                                screenSize: screenSize,
+                                title: 'Flutter Development',
+                                description: 'I can build beautiful and responsive mobile and web apps using Flutter and Dart.',
+                                icon: FontAwesomeIcons.code, isPhone: isPhone, constants: constants,
+                                isHovered: hoverController.isServicesFlutterCardHovered.value,
+                              ),
+                            ),
+                          ),
+                          Flexible(
+                            flex: 1,
+                            child: InkWell(
+                              onHover: (value){
+                                hoverController.isServicesBackendCardHovered.value = value;
+                              },
+                              onTap: (){},
+                              child: ElevatedCardWidget(
+                                screenSize: screenSize,
+                                title: 'Backend Development',
+                                description: 'I can build scalable and efficient backend services using Firebase, MongoDB, RESTApi and Python.',
+                                icon: FontAwesomeIcons.database, isPhone: isPhone, constants: constants, isHovered: hoverController.isServicesBackendCardHovered.value,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ))
+                  ],
+                ),
+              ),
+            ),
+            Container(height: isPhone? 30: 70,color: constants.bgColor2,),
 
           ],
         ),

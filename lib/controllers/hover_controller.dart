@@ -6,4 +6,7 @@ class HoverController extends GetxController{
   RxBool isProjectsHovered = false.obs;
   RxBool isSkillsHovered = false.obs;
   RxBool isContactHovered = false.obs;
+  RxBool isServicesUiCardHovered = false.obs;
+  RxBool isServicesFlutterCardHovered = false.obs;
+  RxBool isServicesBackendCardHovered = false.obs;
 }
