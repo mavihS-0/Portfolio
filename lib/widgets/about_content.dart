@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../globals/text_styles.dart';
 
@@ -76,7 +77,9 @@ class AboutContent extends StatelessWidget {
           ),),
           SizedBox(height: screenSize*0.02,),
           TextButton(
-            onPressed: (){},
+            onPressed: (){
+              launchUrlString('https://drive.google.com/file/d/1wtxNpCP-O_nBu1OzMHA9vQ2GfnMaSGin/view?usp=sharing');
+            },
             child: Text('Download CV',style: MyTextStyles.appBarContents.copyWith(
               color: constants.bgColor,
               fontSize: constants.titleSize3,
