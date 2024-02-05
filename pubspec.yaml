@@ -40,6 +40,9 @@ dependencies:
   glowy_borders: ^1.0.2
   animated_text_kit: ^4.2.2
   font_awesome_flutter: ^10.7.0
+  auto_size_text: ^3.0.0
+  url_launcher: ^6.2.4
+  cross_fade: ^0.4.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +71,25 @@ flutter:
     - assets/profile.png
     - assets/projectsDemo.jpg
     - assets/proj.png
+    - assets/dot.png
+    - assets/projects/project1.png
+    - assets/logos/firebase.png
+    - assets/logos/flutter.png
+    - assets/logos/mongodb.png
+    - assets/logos/bloc.png
+    - assets/logos/python.png
+    - assets/logos/c.png
+    - assets/logos/cpp.png
+    - assets/logos/java.png
+    - assets/logos/mysql.png
+    - assets/logos/dart.png
+    - assets/logos/figma.png
+    - assets/logos/js.png
+    - assets/logos/ps.png
+    - assets/logos/pp.png
+    - assets/logos/git.png
+    - assets/logos/reactNative.png
+    - assets/leetcode.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

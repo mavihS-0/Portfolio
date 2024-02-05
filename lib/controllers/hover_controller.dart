@@ -9,4 +9,5 @@ class HoverController extends GetxController{
   RxBool isServicesUiCardHovered = false.obs;
   RxBool isServicesFlutterCardHovered = false.obs;
   RxBool isServicesBackendCardHovered = false.obs;
+  RxInt skillIndexHovered = 0.obs;
 }

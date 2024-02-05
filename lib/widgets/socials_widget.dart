@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 import '../globals/text_styles.dart';
 
 class SocialsWidget extends StatelessWidget {
@@ -61,7 +62,9 @@ class SocialsWidget extends StatelessWidget {
                             icon: FaIcon(FontAwesomeIcons.twitter,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              launchUrlString('github.com/mavihS-0');
+                            },
                             icon: FaIcon(FontAwesomeIcons.github,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
@@ -70,7 +73,7 @@ class SocialsWidget extends StatelessWidget {
                           ),
                           IconButton(
                             onPressed: (){},
-                            icon: FaIcon(FontAwesomeIcons.hackerrank,color: constants.bgColor,size: isPhone? 20:30,),
+                            icon: Image.asset('assets/leetcode.png',color: constants.bgColor,width: isPhone? 20:30, height:isPhone? 20:30,),
                           ),
                         ],
                       ),

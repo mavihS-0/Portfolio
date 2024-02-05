@@ -22,6 +22,8 @@ class MobileConstants extends Constants{
   double titleSize3 = 10;
   double socialsHeadingSize = 10;
   double cardIconSize = 20;
+  double titleSize1_5 = 20;
+
 }
 
 class WebConstants extends Constants{
@@ -40,6 +42,7 @@ class WebConstants extends Constants{
   double appBarContentsSpacing = 30;
   double contentSpacing = 50;
   double titleSize1 = 100;
+  double titleSize1_5 = 50;
   double titleSize2 = 30;
   double titleSize3 = 20;
   double socialsHeadingSize = 20;

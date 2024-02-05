@@ -24,12 +24,12 @@ class ElevatedCardWidget extends StatelessWidget {
           BoxShadow(
             color: constants.mediumLightContentColor,
             offset: Offset(5, 5),
-            blurRadius: 25,
+            blurRadius: isPhone?5:25,
           ),
           BoxShadow(
             color: constants.lightContentColor,
             offset: Offset(-5, -5),
-            blurRadius: 25,
+            blurRadius: isPhone? 5: 25,
           ),
         ],
       ),
