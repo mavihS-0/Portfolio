@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
+import 'package:url_launcher/url_launcher_string.dart';
 
 import '../data/projects.dart';
 import '../globals/text_styles.dart';
@@ -70,22 +72,28 @@ class ProjectBuilder extends StatelessWidget {
                         borderRadius: BorderRadius.circular(20),
                         color: constants.superLightContentColor
                       ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(FontAwesomeIcons.github),
-                          screenSize<1400? SizedBox():
-                          SizedBox(width: 30,),
-                          screenSize<1400? SizedBox():
-                          AutoSizeText(
-                            projects[index].githubLink,
-                            style: MyTextStyles.appBarContents.copyWith(
-                              fontSize: constants.titleSize3,
-                              color: constants.mediumLightContentColor,
+                      child: InkWell(
+                        onTap: (){
+                          launchUrlString('https://github.com/mavihS-0/FireApp');
+                        }
+                        ,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(FontAwesomeIcons.github),
+                            screenSize<1400? SizedBox():
+                            SizedBox(width: 30,),
+                            screenSize<1400? SizedBox():
+                            AutoSizeText(
+                              projects[index].githubLink,
+                              style: MyTextStyles.appBarContents.copyWith(
+                                fontSize: constants.titleSize3,
+                                color: constants.mediumLightContentColor,
+                              ),
+                              maxLines: 1,
                             ),
-                            maxLines: 1,
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     )
                   ]

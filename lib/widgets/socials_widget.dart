@@ -50,29 +50,39 @@ class SocialsWidget extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              launchUrlString('https://www.instagram.com/sh__i__v__am/');
+                            },
                             icon: FaIcon(FontAwesomeIcons.instagram,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              launchUrlString('https://www.linkedin.com/in/shivam-singh-63797a237/');
+                            },
                             icon: FaIcon(FontAwesomeIcons.linkedin,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              launchUrlString('https://twitter.com/mavihS6');
+                            },
                             icon: FaIcon(FontAwesomeIcons.twitter,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
                             onPressed: (){
-                              launchUrlString('github.com/mavihS-0');
+                              launchUrlString('https://github.com/mavihS-0');
                             },
                             icon: FaIcon(FontAwesomeIcons.github,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              launchUrlString('https://www.hackerrank.com/profile/mavihS0');
+                            },
                             icon: FaIcon(FontAwesomeIcons.hackerrank,color: constants.bgColor,size: isPhone? 20:30,),
                           ),
                           IconButton(
-                            onPressed: (){},
+                            onPressed: (){
+                              launchUrlString('https://leetcode.com/mavihS0/');
+                            },
                             icon: Image.asset('assets/leetcode.png',color: constants.bgColor,width: isPhone? 20:30, height:isPhone? 20:30,),
                           ),
                         ],

@@ -44,6 +44,19 @@ class HomePage extends StatelessWidget {
       constants = WebConstants();
       print('WebHomePage: screenSize: $screenSize');
     }
+
+    List<Widget> skills = List.generate(16, (i2) => Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Image.asset(logos[i2].imagePath,fit: BoxFit.cover,height: 300,),
+        SizedBox(height: screenSize*0.03,),
+        AutoSizeText(logos[i2].title,style: MyTextStyles.appBarContents.copyWith(
+          fontSize: constants.titleSize2,
+          color: constants.superLightContentColor,
+        ), maxLines: 1,),
+      ],
+    ));
+
     return Scaffold(
       backgroundColor: constants.bgColor,
       appBar: AppBar(
@@ -427,17 +440,7 @@ ListTile(
                                   child: CrossFade(
                                     value: hoverController.skillIndexHovered.value,
                                     duration: Duration(milliseconds: 500),
-                                    builder: (context, i) => List.generate(16, (i2) => Column(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Image.asset(logos[i2].imagePath,fit: BoxFit.cover,height: 300,),
-                                        SizedBox(height: screenSize*0.03,),
-                                        AutoSizeText(logos[i2].title,style: MyTextStyles.appBarContents.copyWith(
-                                          fontSize: constants.titleSize2,
-                                          color: constants.superLightContentColor,
-                                        ), maxLines: 1,),
-                                      ],
-                                    ))[i],
+                                    builder: (context, i) => skills[i],
                                   )
                               )),
                             )
@@ -528,7 +531,12 @@ ListTile(
         ),
       )
     );
+
+
+
   }
+
+
 
 }
 
