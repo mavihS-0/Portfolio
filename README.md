@@ -1,3 +1,3 @@
 # My Portfolio
 
-## Check out my portfolio website: [Portfolio](https://portfolio-5e0bc.web.app/)
+## Check out my portfolio website built completely using Flutter: [Portfolio](https://portfolio-5e0bc.web.app/)
