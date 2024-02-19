@@ -71,7 +71,7 @@ class AboutContent extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20,),
-          Text('I am a passionate Flutter Developer with 2 years of experience. I have worked on various projects and have a good understanding of Flutter and Dart. I am also familiar with Firebase and other backend technologies. I am a quick learner and always ready to learn new technologies.',style: MyTextStyles.appBarContents.copyWith(
+          Text('I am a passionate Flutter Developer with 2 years of experience. I have worked on various projects and have a good understanding of Flutter as well as general programming. I am also familiar with Firebase, MongoDB and other backend technologies. I am a quick learner and always ready to learn new technologies. Currently exploring other technologies like React Native and Swift.',style: MyTextStyles.appBarContents.copyWith(
             color: constants.superLightContentColor,
             fontSize: constants.titleSize3,
           ),),

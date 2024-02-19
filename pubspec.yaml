@@ -102,6 +102,9 @@ flutter:
     - assets/logos/reactNative.png
     - assets/leetcode.png
     - assets/portfolio.png
+    - assets/projects/communiti.png
+    - assets/projects/currents.png
+    - assets/projects/pixq.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

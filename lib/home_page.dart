@@ -309,8 +309,8 @@ ListTile(
                                 onTap: (){},
                                 child: ElevatedCardWidget(
                                   screenSize: screenSize,
-                                  title: 'Flutter Development',
-                                  description: 'I can build beautiful and responsive mobile and web apps using Flutter and Dart.',
+                                  title: 'App Development',
+                                  description: 'I can build beautiful and responsive cross platform apps using Flutter and React Native.',
                                   icon: FontAwesomeIcons.code, isPhone: isPhone, constants: constants,
                                   isHovered: hoverController.isServicesFlutterCardHovered.value,
                                 ),
