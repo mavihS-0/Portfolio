@@ -74,7 +74,7 @@ class ProjectBuilder extends StatelessWidget {
                       ),
                       child: InkWell(
                         onTap: (){
-                          launchUrlString('https://github.com/mavihS-0/FireApp');
+                          launchUrlString('https://${projects[index].githubLink}');
                         }
                         ,
                         child: Row(

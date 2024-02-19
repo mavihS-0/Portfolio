@@ -15,6 +15,7 @@ import 'package:portfolio/widgets/about_content.dart';
 import 'package:portfolio/widgets/elevated_card_widget.dart';
 import 'package:portfolio/widgets/profile_photo.dart';
 import 'package:portfolio/widgets/project_builder.dart';
+import 'package:portfolio/widgets/services.dart';
 import 'package:portfolio/widgets/socials_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -279,61 +280,8 @@ ListTile(
                         fontSize: constants.titleSize1,
                         color: constants.superLightContentColor,
                       ),),
-                      Obx(() => Padding(
-                        padding:  EdgeInsets.symmetric(horizontal: isPhone ? 0 : screenSize*0.1),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Flexible(
-                              flex: 1,
-                              child: InkWell(
-                                onHover: (value){
-                                  hoverController.isServicesUiCardHovered.value = value;
-                                },
-                                onTap: (){},
-                                child: ElevatedCardWidget(
-                                  screenSize: screenSize,
-                                  title: 'Ui/Ux Development',
-                                  description: 'I can design and develop beautiful and responsive user interfaces using Figma and Flutter.',
-                                  icon: FontAwesomeIcons.pen, isPhone: isPhone, constants: constants,
-                                  isHovered: hoverController.isServicesUiCardHovered.value,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 1,
-                              child: InkWell(
-                                onHover: (value){
-                                  hoverController.isServicesFlutterCardHovered.value = value;
-                                },
-                                onTap: (){},
-                                child: ElevatedCardWidget(
-                                  screenSize: screenSize,
-                                  title: 'App Development',
-                                  description: 'I can build beautiful and responsive cross platform apps using Flutter and React Native.',
-                                  icon: FontAwesomeIcons.code, isPhone: isPhone, constants: constants,
-                                  isHovered: hoverController.isServicesFlutterCardHovered.value,
-                                ),
-                              ),
-                            ),
-                            Flexible(
-                              flex: 1,
-                              child: InkWell(
-                                onHover: (value){
-                                  hoverController.isServicesBackendCardHovered.value = value;
-                                },
-                                onTap: (){},
-                                child: ElevatedCardWidget(
-                                  screenSize: screenSize,
-                                  title: 'Backend Development',
-                                  description: 'I can build scalable and efficient backend services using Firebase, MongoDB, RESTApi and Python.',
-                                  icon: FontAwesomeIcons.database, isPhone: isPhone, constants: constants, isHovered: hoverController.isServicesBackendCardHovered.value,
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ))
+                      isPhone ? ServicesMob(isPhone: isPhone, screenSize: screenSize, hoverController: hoverController, constants: constants)
+                          :ServicesWeb(isPhone: isPhone, screenSize: screenSize, hoverController: hoverController, constants: constants)
                     ],
                   ),
                 ),
@@ -539,4 +487,6 @@ ListTile(
 
 
 }
+
+
 
