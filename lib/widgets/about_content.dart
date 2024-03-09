@@ -40,23 +40,17 @@ class AboutContent extends StatelessWidget {
                     fontSize: constants.titleSize2,
                     fontWeight: FontWeight.bold,
                   ),),
-                  TyperAnimatedText('React Native',textStyle: MyTextStyles.appBarContents.copyWith(
+                  TyperAnimatedText('ML & AI',textStyle: MyTextStyles.appBarContents.copyWith(
                     color: constants.lightContentColor,
                     fontSize: constants.titleSize2,
                     fontWeight: FontWeight.bold,
                   ),),
-                  TyperAnimatedText('App',textStyle: MyTextStyles.appBarContents.copyWith(
-                    color: constants.lightContentColor,
-                    fontSize: constants.titleSize2,
-                    fontWeight: FontWeight.bold,
-                  ),),
-                  TyperAnimatedText('Backend',textStyle: MyTextStyles.appBarContents.copyWith(
-                    color: constants.lightContentColor,
-                    fontSize: constants.titleSize2,
-                    fontWeight: FontWeight.bold,
-                  ),),
-
                   TyperAnimatedText('Web',textStyle: MyTextStyles.appBarContents.copyWith(
+                    color: constants.lightContentColor,
+                    fontSize: constants.titleSize2,
+                    fontWeight: FontWeight.bold,
+                  ),),
+                  TyperAnimatedText('API',textStyle: MyTextStyles.appBarContents.copyWith(
                     color: constants.lightContentColor,
                     fontSize: constants.titleSize2,
                     fontWeight: FontWeight.bold,
@@ -71,14 +65,14 @@ class AboutContent extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20,),
-          Text('I am a passionate Flutter Developer with 2 years of experience. I have worked on various projects and have a good understanding of Flutter as well as general programming. I am also familiar with Firebase, MongoDB and other backend technologies. I am a quick learner and always ready to learn new technologies. Currently exploring other technologies like React Native and Swift.',style: MyTextStyles.appBarContents.copyWith(
+          Text('As a 3rd-year B.Tech. Computer Science and Engineering student, I bring versatile expertise in full-stack Flutter development, Machine Learning, AI, MERN stack, API development, and databases. Eager to tackle real-world challenges, my strong collaborative, management, and communication skills make me adept at problem-solving. Seeking a dynamic work environment to continually learn and contribute. Proficient in Flutter, React, Flask, Spring Boot (Java), Express, Firebase, MongoDB, MySQL, TensorFlow, Python, Java, C, C++, Dart, JavaScript, HTML5, CSS, Firestore, Markdown, R, MATLAB, MySQL, Figma, and Rive',style: MyTextStyles.appBarContents.copyWith(
             color: constants.superLightContentColor,
             fontSize: constants.titleSize3,
           ),),
           SizedBox(height: screenSize*0.02,),
           TextButton(
             onPressed: (){
-              launchUrlString('https://drive.google.com/file/d/1wtxNpCP-O_nBu1OzMHA9vQ2GfnMaSGin/view?usp=sharing');
+              launchUrlString('https://drive.google.com/file/d/1ltEcLrLYslwxFwoPSlrfKUK5kmA3cSvF/view?usp=sharing');
             },
             child: Text('Download CV',style: MyTextStyles.appBarContents.copyWith(
               color: constants.bgColor,

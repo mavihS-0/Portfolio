@@ -96,9 +96,13 @@ flutter:
     - assets/logos/dart.png
     - assets/logos/figma.png
     - assets/logos/js.png
-    - assets/logos/ps.png
-    - assets/logos/pp.png
+    - assets/logos/matlab.png
     - assets/logos/git.png
+    - assets/logos/express.png
+    - assets/logos/node.png
+    - assets/logos/springboot.png
+    - assets/logos/flask.png
+    - assets/logos/tensorflow.png
     - assets/logos/reactNative.png
     - assets/leetcode.png
     - assets/portfolio.png

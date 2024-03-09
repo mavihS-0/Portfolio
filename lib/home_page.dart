@@ -46,7 +46,7 @@ class HomePage extends StatelessWidget {
       print('WebHomePage: screenSize: $screenSize');
     }
 
-    List<Widget> skills = List.generate(16, (i2) => Column(
+    List<Widget> skills = List.generate(20, (i2) => Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(logos[i2].imagePath,fit: BoxFit.cover,height: 300,),
@@ -360,7 +360,7 @@ ListTile(
                               flex: 4,
                               child: Container(
                                 child: Column(
-                                  children: List.generate(4, (index1) => Container(
+                                  children: List.generate(5, (index1) => Container(
                                       height: isPhone? 50: 100,
                                       child: Row(
                                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,

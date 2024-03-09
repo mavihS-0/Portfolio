@@ -34,8 +34,8 @@ class ServicesWeb extends StatelessWidget {
               onTap: (){},
               child: ElevatedCardWidget(
                 screenSize: screenSize,
-                title: 'Ui/Ux Development',
-                description: 'I can design and develop beautiful and responsive user interfaces using Figma and Flutter.',
+                title: 'App and Web Development',
+                description: "Crafting seamless digital experiences with Flutter for cross-platform mobile apps and MERN stack for robust web solutions.",
                 icon: FontAwesomeIcons.pen, isPhone: isPhone, constants: constants,
                 isHovered: hoverController.isServicesUiCardHovered.value,
               ),
@@ -50,8 +50,8 @@ class ServicesWeb extends StatelessWidget {
               onTap: (){},
               child: ElevatedCardWidget(
                 screenSize: screenSize,
-                title: 'App Development',
-                description: 'I can build beautiful and responsive cross platform apps using Flutter and React Native.',
+                title: 'Machine Learning',
+                description: 'I specialize in deploying advanced machine learning algorithms using Python and TensorFlow, turning raw data into actionable business insights.',
                 icon: FontAwesomeIcons.code, isPhone: isPhone, constants: constants,
                 isHovered: hoverController.isServicesFlutterCardHovered.value,
               ),
@@ -66,8 +66,8 @@ class ServicesWeb extends StatelessWidget {
               onTap: (){},
               child: ElevatedCardWidget(
                 screenSize: screenSize,
-                title: 'Backend Development',
-                description: 'I can build scalable and efficient backend services using Firebase, MongoDB, RESTApi and Python.',
+                title: 'API Development',
+                description: 'I excel in API development using Flask, Spring Boot, and Express, ensuring seamless integration and communication between your applications.',
                 icon: FontAwesomeIcons.database, isPhone: isPhone, constants: constants, isHovered: hoverController.isServicesBackendCardHovered.value,
               ),
             ),
@@ -106,8 +106,8 @@ class ServicesMob extends StatelessWidget {
             onTap: (){},
             child: ElevatedCardWidget(
               screenSize: screenSize,
-              title: 'Ui/Ux Development',
-              description: 'I can design and develop beautiful and responsive user interfaces using Figma and Flutter.',
+              title: 'App and Web Development',
+              description: "Crafting seamless digital experiences with Flutter for cross-platform mobile apps and MERN stack for robust web solutions.",
               icon: FontAwesomeIcons.pen, isPhone: isPhone, constants: constants,
               isHovered: hoverController.isServicesUiCardHovered.value,
             ),
@@ -119,8 +119,9 @@ class ServicesMob extends StatelessWidget {
             onTap: (){},
             child: ElevatedCardWidget(
               screenSize: screenSize,
-              title: 'App Development',
-              description: 'I can build beautiful and responsive cross platform apps using Flutter and React Native.',
+              title: 'Machine Learning',
+              description: 'I specialize in deploying advanced machine learning algorithms using Python and TensorFlow, turning raw data into actionable business insights.',
+
               icon: FontAwesomeIcons.code, isPhone: isPhone, constants: constants,
               isHovered: hoverController.isServicesFlutterCardHovered.value,
             ),
@@ -132,8 +133,8 @@ class ServicesMob extends StatelessWidget {
             onTap: (){},
             child: ElevatedCardWidget(
               screenSize: screenSize,
-              title: 'Backend Development',
-              description: 'I can build scalable and efficient backend services using Firebase, MongoDB, RESTApi and Python.',
+              title: 'API Development',
+              description: 'I excel in API development using Flask, Spring Boot, and Express, ensuring seamless integration and communication between your applications.',
               icon: FontAwesomeIcons.database, isPhone: isPhone, constants: constants, isHovered: hoverController.isServicesBackendCardHovered.value,
             ),
           ),
